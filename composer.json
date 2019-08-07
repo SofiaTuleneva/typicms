@@ -1,0 +1,111 @@
+{
+    "name": "typicms/base",
+    "type": "project",
+    "description": "Multilingual CMS built with Laravel 5",
+    "keywords": ["cms", "multilingual", "laravel", "typi"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samuel De Backer",
+            "email": "samuel@typidesign.be",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TypiCMS/Laravel-Sidebar.git"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "bkwld/croppa": "~4.7.0",
+        "eluceo/ical": "~0.8",
+        "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "laracasts/presenter": "~0.2.1",
+        "laracasts/utilities": "~3.0",
+        "laravel/framework": "5.8.*",
+        "laravel/tinker": "^1.0",
+        "laravelium/feed": "~3.0",
+        "laravelium/sitemap": "~3.0",
+        "maatwebsite/laravel-sidebar": "~1.1.2",
+        "msurguy/honeypot": "~1.1.1",
+        "rinvex/laravel-repositories": "~4.1.0",
+        "spatie/eloquent-sortable": "~3.5.0",
+        "spatie/laravel-permission": "~2.36.1",
+        "spatie/laravel-query-builder": "~1.17.4",
+        "spatie/laravel-translatable": "~4.1.1",
+        "typicms/blocks": "~6.0.0",
+        "typicms/contacts": "^6.0",
+        "typicms/core": "~6.0.0",
+        "typicms/dashboard": "~6.0.0",
+        "typicms/files": "~6.0.0",
+        "typicms/history": "~6.0.0",
+        "typicms/laravel-translatable-bootforms": "~4.0.0",
+        "typicms/menus": "~6.0.0",
+        "typicms/nestablecollection": "~1.1.12",
+        "typicms/news": "^6.0",
+        "typicms/objects": "~6.0.0",
+        "typicms/pages": "~6.0.0",
+        "typicms/roles": "~6.0.0",
+        "typicms/settings": "~6.0.0",
+        "typicms/sitemap": "~6.0.0",
+        "typicms/tags": "~6.0.0",
+        "typicms/translations": "~6.0.0",
+        "typicms/users": "~6.0.0",
+        "typidesign/laravel-artisan-translations": "~1.0.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "~3.2",
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^7.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "TypiCMS\\Modules\\": "Modules/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php artisan storage:link"
+        ]
+    }
+}
