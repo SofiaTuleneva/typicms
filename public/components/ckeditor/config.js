@@ -43,7 +43,7 @@ CKEDITOR.editorConfig = function(config) {
     // Set the most common block elements.
     config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre';
 
-    config.extraPlugins = 'image2,codemirror,panelbutton,oembed,justify,showblocks,div,dialogadvtab';
+    config.extraPlugins = 'image2,codemirror,panelbutton,oembed,justify,showblocks,div,dialogadvtab,colordialog,docprops';
     config.removePlugins = 'image';
 
     config.height = 500;
@@ -60,6 +60,13 @@ CKEDITOR.editorConfig = function(config) {
     // File browser
     config.filebrowserBrowseUrl = '/admin/files?view=filepicker';
     config.filebrowserImageBrowseUrl = '/admin/files?type=i&view=filepicker';
+
+
+    // full page mode
+    config.fullPage = true;
+    // Disable content filtering because if you use full page mode, you probably
+    // want to  freely enter any HTML content in source mode without any limitations.
+    config.allowedContent = true;
 };
 
 // dialogDefinition
