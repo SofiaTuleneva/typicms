@@ -1,4 +1,6 @@
 .menu-footer {
+    float: left;
+    
     &-list {
         @extend .nav;
         @extend .nav-pills;

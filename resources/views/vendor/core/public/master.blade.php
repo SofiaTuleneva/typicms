@@ -94,13 +94,15 @@
         </main>
 
         @section('site-footer')
-        <footer class="site-footer">
-            <nav class="social-nav">
-                @menu('social')
-            </nav>
-            <nav class="footer-nav">
-                @menu('footer')
-            </nav>
+        <footer class="site-footer mt-5">
+            <div class="pt-3 pb-3">
+                <nav class="social-nav">
+                    @menu('social')
+                </nav>
+                <nav class="footer-nav">
+                    @menu('footer')
+                </nav>
+            </div>
         </footer>
         @show
 

@@ -1,4 +1,6 @@
 .menu-social {
+    float: right;
+
     &-list {
         @extend .nav;
         @extend .nav-pills;

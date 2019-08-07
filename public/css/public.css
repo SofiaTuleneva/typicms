@@ -15134,6 +15134,26 @@ body.compensate-for-scrollbar {
   border-radius: .3rem;
 }
 
+.site-footer {
+  border-top: 1px solid #ccc;
+}
+
+.social-nav {
+  float: right;
+}
+
+.footer-nav {
+  float: left;
+}
+
+.menu-social {
+  float: right;
+}
+
+.menu-footer {
+  float: left;
+}
+
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
