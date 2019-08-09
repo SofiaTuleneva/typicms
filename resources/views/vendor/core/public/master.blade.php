@@ -68,7 +68,7 @@
     @section('site-header')
         <header class="site-header">
             <div class="container">
-                <div class="container text-center">
+                <div class="container text-center animated pulse"  style="visibility: visible;">
                     <h1 class="display-3">Bootstrap 4</h1>
                     <p class="lead">This is a simple Bootstrap 4 template for TypiCMS</p>
                     <p>It supports several useful features right out of the box. All you have to do is to put it to work</p>
